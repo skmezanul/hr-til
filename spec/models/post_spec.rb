@@ -234,4 +234,37 @@ describe Post do
       end
     end
   end
+
+  context 'slack integration on tens of likes' do
+    describe 'first time reaching a milestone' do
+      it 'should notify slack' do
+        post = FactoryGirl.build(:post, likes: 10)
+
+        expect(post).to receive(:notify_slack)
+        post.save
+      end
+    end
+
+    describe 'reaches the milestone more than once' do
+      it 'should notify slack only once' do
+        post = FactoryGirl.create(:post)
+
+        expect(post).to receive(:notify_slack)
+        post.likes = 10
+        post.save
+
+        expect(post).to_not receive(:notify_slack)
+        post.likes = 11
+        post.save
+        post.likes = 10
+        post.save
+
+        expect(post).to_not receive(:notify_slack)
+        post.likes = 9
+        post.save
+        post.likes = 10
+        post.save
+      end
+    end
+  end
 end

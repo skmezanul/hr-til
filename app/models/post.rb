@@ -13,7 +13,8 @@ class Post < ActiveRecord::Base
   belongs_to :channel
 
   before_create :generate_slug
-  after_update :notify_slack_on_likes_threshold, if: :likes_threshold?
+  after_update :notify_slack_on_likes_threshold, if: :likes_threshold?,
+    unless: :slack_previously_notified_at_likes_threshold?
   after_save :notify_slack_on_publication, if: :publishing?
 
   scope :published, -> { where('published_at is not null') }
@@ -56,6 +57,7 @@ class Post < ActiveRecord::Base
   end
 
   def notify_slack_on_likes_threshold
+    slack_notified_at_likes_threshold << likes
     notify_slack('likes_threshold')
   end
 
@@ -75,6 +77,10 @@ class Post < ActiveRecord::Base
 
   def likes_threshold?
     tens_of_likes? && likes_changed?
+  end
+
+  def slack_previously_notified_at_likes_threshold?
+    slack_notified_at_likes_threshold.include?(likes)
   end
 
   def publishing?
