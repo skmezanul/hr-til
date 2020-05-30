@@ -22,7 +22,7 @@ gem 'rouge'
 gem 'sass-rails', '~> 5.0'
 gem 'sucker_punch', '~> 1.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'kaminari'
+gem 'kaminari', '>= 1.2.1'
 gem 'twitter'
 gem 'scenic', '~> 1.0'
 
