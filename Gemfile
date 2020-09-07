@@ -44,7 +44,7 @@ group :production do
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', '>= 2.1.0', require: false
   gem 'database_cleaner'
   gem 'launchy'
   gem 'simplecov', require: false
