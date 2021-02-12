@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.2.5'
+gem 'rails', '6.0.3.5'
 
 gem 'active_model_serializers'
 gem 'authem'
