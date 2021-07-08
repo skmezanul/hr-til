@@ -23,7 +23,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'sucker_punch', '~> 1.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'kaminari'
-gem 'twitter'
+gem 'twitter', '>= 5.16.0'
 gem 'scenic', '~> 1.0'
 
 group :development do
@@ -44,10 +44,10 @@ group :production do
 end
 
 group :test do
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', '>= 1.4.3', require: false
   gem 'database_cleaner'
-  gem 'launchy'
+  gem 'launchy', '>= 2.4.3'
   gem 'simplecov', require: false
-  gem 'webmock'
+  gem 'webmock', '>= 1.22.6'
   gem 'selenium-webdriver'
 end
