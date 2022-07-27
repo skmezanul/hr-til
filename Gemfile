@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.2.5'
+gem 'rails', '5.2.8.1'
 
 gem 'active_model_serializers'
 gem 'authem'
@@ -24,7 +24,7 @@ gem 'sucker_punch', '~> 1.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'kaminari'
 gem 'twitter'
-gem 'scenic', '~> 1.0'
+gem 'scenic', '~> 1.2', '>= 1.2.0'
 
 group :development do
   gem 'brakeman', require: false
