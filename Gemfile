@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.3'
 
-gem 'rails', '~> 5.x'
+gem 'rails', '~> 7.0', '>= 7.0.0'
 
 gem 'active_model_serializers'
 gem 'airbrake'
@@ -14,14 +14,14 @@ gem 'haml-rails'
 gem 'httparty'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'kaminari'
+gem 'kaminari', '>= 1.0.0'
 gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'puma'
 gem 'rack-cors', require: 'rack/cors'
 gem 'redcarpet'
 gem 'rouge'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'scenic', '~> 1.3'
 gem 'sucker_punch', '~> 2.0'
 gem 'twitter'
@@ -48,7 +48,7 @@ end
 
 group :test do
   gem 'capybara-webmock'
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', '>= 2.1.0', require: false
   gem 'database_cleaner'
   gem 'flatware-cucumber', require: false
   gem 'flatware-rspec', require: false
