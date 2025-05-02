@@ -39,7 +39,7 @@ group :development, :test do
   gem 'figaro'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
 end
 
 group :production do
