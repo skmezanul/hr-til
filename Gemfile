@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.3'
 
-gem 'rails', '~> 5.x'
+gem 'rails', '~> 7.1', '>= 7.1.5.2'
 
 gem 'active_model_serializers'
 gem 'airbrake'
@@ -22,7 +22,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'redcarpet'
 gem 'rouge'
 gem 'sass-rails', '~> 5.0'
-gem 'scenic', '~> 1.3'
+gem 'scenic', '~> 1.4', '>= 1.4.0'
 gem 'sucker_punch', '~> 2.0'
 gem 'twitter'
 gem 'uglifier', '>= 1.3.0'
